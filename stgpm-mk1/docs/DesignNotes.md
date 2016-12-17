@@ -14,6 +14,7 @@ Design Notes
     * low performance (low throughput, latency, frequency)
     * semantics oriented macro instructions
     * accessible from outside
+    * synthesizable (potentially)
 
 
 # Architecture
@@ -62,11 +63,34 @@ Design Notes
     * primitive operations
 
 
+# Signale nameing rule (general)
+  * {block}_{stage}_{function}
+
+
 # Abbreviation
-  clk
-  rst
-  rd
-  wt
+  ack    acknouledge
+  addr   address
+  clk    clock
+  cs     chip select
+  ctl    control
+  dp     datapath
+  dst    destination
+  fw     forwarding
+  imm    immediate
+  inst   instruction
+  mem    memory
+  op     operation
+  pc     program counter
+  rd     read
+  re     read enable
+  reg    register
+  req    request
+  rst    reset
+  sel    select
+  src    source
+  vld    valid
+  we     write enable
+  wt     write
 
 
 
