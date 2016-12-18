@@ -3,20 +3,28 @@
 STG Physical Machine - mark1
 
 
-  * stgpm : stgpm top
+  * stgpm1 :   : stgpm1 top
 
-  * crmu  : clock, reset and mode control unit
-  * ctlu  : control unit
-  * opeu  : operation unit
-  * regu  : register unit
-  * memu  : memory unit
+  * crmu   : - : clock, reset and mode control unit
 
-  * iocu  : io control unit
-  * tscu  : thread state control unit
-  * dbgu  : debug control unit
+  * ctlu   : - : control unit
+    * ifcu : i : instruction fetch control unit
+    * idcu : d : instruction decode control unit
 
-  * lib      : library
-  * include  : include
+  * exeu   : - : execution unit
+    * regu : r : register unit
+    * opeu : e : operation unit
+
+  * cmem   : m : static code memory unit
+  * hmem   : h : heap memory unit
+  * smem   : s : stack memory unit
+
+  * iocu   : x : io control unit
+  * tscu   : t : thread state control unit
+  * dbgu   : g : debug control unit
+
+  * lib    : - : library
+  * include: - : include
 
 
 
