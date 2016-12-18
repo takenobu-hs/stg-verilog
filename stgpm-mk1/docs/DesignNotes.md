@@ -22,7 +22,7 @@ Design Notes
   * non pipelined
   * 7 stages
   * 32bit data word
-  * N bit address space
+  * N(16?) bit address space
   * byte addressing (little endian like x86)
 
 
@@ -63,21 +63,33 @@ Design Notes
     * primitive operations
 
 
-# Signale nameing rule (general)
-  * {block}_{stage}_{function}
+# Signal naming rule (general)
+  * {block(id)}{stage}_{function}
+      block ::= i, d, r, e, m, x, t, g, x
+      id    ::= a, b, ...
+      stage ::= 0, 1, 2, ... 6
+  * example
+      i0_inst
+      d2_op
+      m5_rd_dt
 
 
 # Abbreviation
-  ack    acknouledge
+  ack    acknowledge
   addr   address
   clk    clock
+  cm     static code memory
   cs     chip select
   ctl    control
   dp     datapath
   dst    destination
+  dt     data
+  en     enable
   fw     forwarding
+  hm     heap memory
   imm    immediate
   inst   instruction
+  ld     load
   mem    memory
   op     operation
   pc     program counter
@@ -87,7 +99,9 @@ Design Notes
   req    request
   rst    reset
   sel    select
+  sm     stack memory
   src    source
+  st     store
   vld    valid
   we     write enable
   wt     write
