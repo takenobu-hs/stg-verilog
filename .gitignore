@@ -1,0 +1,5 @@
+tmp
+exe
+*.comp
+*.run.stdout
+pattern.v
