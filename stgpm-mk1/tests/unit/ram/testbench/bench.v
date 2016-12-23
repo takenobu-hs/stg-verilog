@@ -4,75 +4,35 @@
 
 module top();
 
-  wire             rst; 
-  wire             clk; 
-  wire             cs;
-  wire             we;
-  wire    [ 5:0]   adr;
-  wire    [31:0]   din;
-  wire    [31:0]   dout;
-
-  /* dut */
-  sp1_ram ram(
-    .rst(rst),
-    .clk(clk),
-    .cs(cs),
-    .we(we),
-    .adr(adr),
-    .din(din),
-    .dout(dout)
-  );
-
-
-  /* driver */
-  bench_ram bench_ram(
-    .rst(rst),
-    .clk(clk),
-    .cs(cs),
-    .we(we),
-    .adr(adr),
-    .din(din),
-    .dout(dout)
-  );
-
-
-endmodule
-
-
-
-module bench_ram(
-  rst,
-  clk,
-  cs,
-  we,
-  adr,
-  din,
-  dout
-);
-
   parameter HIGH = 1'b1;
   parameter LOW  = 1'b0;
   parameter UNK  = 1'bx;
 
-  output           rst;
-  output           clk;
-  output           cs;
-  output           we;
-  output  [ 5:0]   adr;
-  output  [31:0]   din;
-  input   [31:0]   dout;
-
-  reg              rst;
-  reg              clk;
-  reg              cs;
-  reg              we;
-  reg     [ 5:0]   adr;
-  reg     [31:0]   din;
-  integer          cycle;
+  reg               rst;
+  reg               clk;
 
 
   /* include test vector */
 `include "pattern.v"
+
+
+  reg              cs;
+  reg              we;
+  reg     [ 5:0]   adr;
+  reg     [31:0]   din;
+  wire    [31:0]   dout;
+
+  /* dut */
+  sp1_ram #(AW, DW, DS) ram(
+    .rst(rst),
+    .clk(clk),
+    .cs(cs),
+    .we(we),
+    .adr(adr),
+    .din(din),
+    .dout(dout)
+  );
+
 
 
   /* clock */
@@ -89,13 +49,13 @@ module bench_ram(
   initial begin
     rst = HIGH;
     cs = LOW;
-
     repeat(5) @(posedge clk);
     #1 rst = LOW;
   end
 
 
   /* cycle */
+  integer cycle;
   initial cycle = 0;
   always @(posedge clk) cycle = cycle + 1;
 

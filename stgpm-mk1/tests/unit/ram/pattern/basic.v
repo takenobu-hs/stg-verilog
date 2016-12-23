@@ -1,5 +1,10 @@
 
 
+  parameter AW = 6;
+  parameter DW = 32;
+  parameter DS = 1<<AW;
+
+
   /* test pattern */
 
   initial begin
