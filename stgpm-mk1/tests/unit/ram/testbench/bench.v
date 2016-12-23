@@ -135,7 +135,7 @@ module bench_ram(
       din = i_din;
       $display("write_ram : %7d: (adr,din) <- (%h, %h)", $time, i_adr, i_din);
 
-      @(negedge clk);
+      @(posedge clk);
       #1;
       cs  = LOW;
       we  = UNK;
@@ -158,10 +158,10 @@ module bench_ram(
 
       @(posedge clk);
       #1;
-      $display("read_ram  : %7d: (dout) -> (%h)", $time, dout);
       cs  = LOW;
       we  = UNK;
       adr = {6{UNK}};
+      $display("read_ram  : %7d: (dout) -> (%h)", $time, dout);
     end
   endtask
 
