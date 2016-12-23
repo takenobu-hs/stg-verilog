@@ -88,6 +88,12 @@ module top();
       @(posedge clk);
       write_ff(32'hcafecafe);
 
+      @(posedge clk);
+      write_ff(32'h33333333);
+      write_ff(32'hcccccccc);
+      write_ff(32'h55555555);
+      write_ff(32'haaaaaaaa);
+
       repeat(2) @(posedge clk);
       write_ff_en_unk();
 
