@@ -18,9 +18,9 @@ module top();
 
   reg              cs;
   reg              we;
-  reg     [ 5:0]   adr;
-  reg     [31:0]   din;
-  wire    [31:0]   dout;
+  reg     [AW-1:0] adr;
+  reg     [DW-1:0] din;
+  wire    [DW-1:0] dout;
 
   /* dut */
   sp1_ram #(AW, DW, DS) ram(
@@ -82,10 +82,74 @@ module top();
   end
 
 
+  /* ff test tasks */
+  task test_ram;
+    begin
+      /* basic data */
+      repeat(2) @(posedge clk);
+      read_ram({AW{LOW}});
+
+      @(posedge clk);
+      write_ram({AW{LOW}}, 32'hffffffff);
+      read_ram({AW{LOW}});
+
+      @(posedge clk);
+      write_ram({AW{LOW}}, 32'h00000000);
+      read_ram({AW{LOW}});
+
+      @(posedge clk);
+      write_ram({AW{LOW}}, 32'h12345678);
+      read_ram({AW{LOW}});
+
+      @(posedge clk);
+      write_ram({AW{LOW}}, 32'hcafecafe);
+      read_ram({AW{LOW}});
+
+
+      /* basic address */
+      @(posedge clk);
+      write_ram({AW{LOW}}, 32'hcafecafe);
+      read_ram({AW{LOW}});
+
+      @(posedge clk);
+      write_ram({AW{HIGH}}, 32'hbeefbeef);
+      read_ram({AW{HIGH}});
+
+
+      /* sequence */
+      @(posedge clk);
+      write_ram('h1, 32'h33333333);
+      write_ram('h2, 32'hcccccccc);
+      write_ram('h3, 32'h55555555);
+      write_ram('h4, 32'haaaaaaaa);
+      read_ram('h1);
+      read_ram('h2);
+      read_ram('h3);
+      read_ram('h4);
+
+
+      /* unknown cs */
+      @(posedge clk);
+      write_ram({AW{LOW}}, 32'hbeefcafe);
+      read_ram({AW{LOW}});
+      unk_cs_ram();
+      read_ram({AW{LOW}});
+
+
+      /* unknown we */
+      @(posedge clk);
+      write_ram({AW{HIGH}}, 32'hcafebeef);
+      read_ram({AW{HIGH}});
+      unk_we_ram();
+      read_ram({AW{HIGH}});
+    end
+  endtask
+
+
   /* write to ram */
   task write_ram;
-    input   [ 5:0]   i_adr;
-    input   [31:0]   i_din;
+    input   [AW-1:0]   i_adr;
+    input   [DW-1:0]   i_din;
     begin
       @(negedge clk);
       #1;
@@ -99,15 +163,15 @@ module top();
       #1;
       cs  = LOW;
       we  = UNK;
-      adr = {6{UNK}};
-      din = {32{UNK}};
+      adr = {AW{UNK}};
+      din = {DW{UNK}};
     end
   endtask
 
 
   /* read from ram */
   task read_ram;
-    input   [ 5:0]   i_adr;
+    input   [AW-1:0]   i_adr;
     begin
       @(negedge clk);
       #1;
@@ -120,8 +184,50 @@ module top();
       #1;
       cs  = LOW;
       we  = UNK;
-      adr = {6{UNK}};
+      adr = {AW{UNK}};
       $display("read_ram  : %7d: (dout) -> (%h)", $time, dout);
+    end
+  endtask
+
+
+  /* unknown cs to ram */
+  task unk_cs_ram;
+    begin
+      @(negedge clk);
+      #1;
+      cs  = UNK;
+      we  = HIGH;
+      adr = {AW{LOW}};
+      din = {DW{LOW}};
+      $display("unk_cs_ram : %7d: (adr,din) <- (%h, %h)", $time, adr, din);
+
+      @(posedge clk);
+      #1;
+      cs  = LOW;
+      we  = UNK;
+      adr = {AW{UNK}};
+      din = {DW{UNK}};
+    end
+  endtask
+
+
+  /* unknown we to ram */
+  task unk_we_ram;
+    begin
+      @(negedge clk);
+      #1;
+      cs  = HIGH;
+      we  = UNK;
+      adr = {AW{HIGH}};
+      din = {DW{HIGH}};
+      $display("unk_cs_ram : %7d: (adr,din) <- (%h, %h)", $time, adr, din);
+
+      @(posedge clk);
+      #1;
+      cs  = LOW;
+      we  = UNK;
+      adr = {AW{UNK}};
+      din = {DW{UNK}};
     end
   endtask
 
