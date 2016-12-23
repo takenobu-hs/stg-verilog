@@ -126,9 +126,6 @@ module bench_ram(
   task write_ram;
     input   [ 5:0]   i_adr;
     input   [31:0]   i_din;
-    reg     [ 5:0]   i_adr;
-    reg     [31:0]   i_din;
-    
     begin
       @(negedge clk);
       #1;
@@ -151,8 +148,6 @@ module bench_ram(
   /* read from ram */
   task read_ram;
     input   [ 5:0]   i_adr;
-    reg     [ 5:0]   i_adr;
-    
     begin
       @(negedge clk);
       #1;

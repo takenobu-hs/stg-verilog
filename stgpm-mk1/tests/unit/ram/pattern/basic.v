@@ -1,6 +1,6 @@
 
 
-  /* test patter */
+  /* test pattern */
 
   initial begin
 
