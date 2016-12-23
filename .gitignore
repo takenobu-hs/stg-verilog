@@ -3,3 +3,5 @@ exe
 *.comp
 *.run.stdout
 pattern.v
+*.gtkw
+*.vcd
