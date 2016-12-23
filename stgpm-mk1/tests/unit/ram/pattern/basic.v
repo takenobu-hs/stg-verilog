@@ -3,6 +3,8 @@
   /* test pattern */
 
   initial begin
+    #1;
+    @(negedge rst);
 
     repeat(2) @(posedge clk);
     write_ram(6'h10, 32'hcafebeef);

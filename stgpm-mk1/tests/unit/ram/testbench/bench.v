@@ -90,7 +90,7 @@ module bench_ram(
     rst = HIGH;
     cs = LOW;
 
-    repeat(3) @(posedge clk);
+    repeat(5) @(posedge clk);
     #1 rst = LOW;
   end
 
@@ -159,9 +159,6 @@ module bench_ram(
       @(posedge clk);
       #1;
       $display("read_ram  : %7d: (dout) -> (%h)", $time, dout);
-
-      @(negedge clk);
-      #1;
       cs  = LOW;
       we  = UNK;
       adr = {6{UNK}};
