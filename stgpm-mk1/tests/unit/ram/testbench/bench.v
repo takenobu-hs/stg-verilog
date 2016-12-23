@@ -1,6 +1,6 @@
 
 
-`include "stgpm1_common.h"
+`include "sp1_common.h"
 
 module top();
 
