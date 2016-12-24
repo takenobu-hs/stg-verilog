@@ -68,9 +68,9 @@ Design Notes
 
 # Signal naming rule (general)
   * {block(id)}{stage}_{function}
-      block ::= i, d, r, e, m, x, t, g, x
-      id    ::= a, b, ...
-      stage ::= 0, 1, 2, ... 6
+    * block ::= i, d, r, e, m, x, t, g, x
+    * id    ::= a, b, ...
+    * stage ::= 0, 1, 2, ... 6
   * example
       i0_inst
       d2_op
