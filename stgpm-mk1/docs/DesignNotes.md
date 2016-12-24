@@ -31,24 +31,24 @@ Design Notes
 
 
 # Stages
-  * stage 0:
+  * stage 1:
     * code address gen
-  * stage 1: 
-    * fetch code
   * stage 2: 
-    * alignment code
+    * fetch code
   * stage 3: 
+    * alignment code
+  * stage 4: 
     * macro decoder
     * micro decoder
     * branch control
-  * stage 4: 
+  * stage 5: 
     * register read
     * heap address gen
     * stack access
-  * stage 5: 
+  * stage 6: 
     * heap access
     * operation
-  * stage 6: 
+  * stage 7: 
     * register write
 
 
