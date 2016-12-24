@@ -5,7 +5,7 @@ STG Physical Machine - mark1
 figures
 -------
 
-* logicl view
+* logical view
   [logical_view.svg][docs/fig/logical_view.svg]
 
 * processing stages
