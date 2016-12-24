@@ -2,21 +2,22 @@
 STG Physical Machine - mark1
 ============================
 
-
-
 figures
 -------
 
-processing stages
-  ![processing stages](docs/fig/stages.svg)
+* logicl view
+  [logical_view.svg][docs/fig/logical_view.svg]
 
-data flow
-  ![data flow](docs/fig/dataflow.svg)
+* processing stages
+  [stages.svg][docs/fig/stages.svg]
 
-module blocks
-  ![module blocks](docs/fig/blocks.svg)
+* main data-flow
+  [dataflow.svg][docs/fig/dataflow.svg]
 
-macro instructions
-  ![macro instructions](docs/fig/macro_instructions.svg)
+* macro instructions
+  [macro_instructions.svg][docs/fig/macro_instructions.svg]
+
+* module blocks
+  [blocks.svg][docs/fig/blocks.svg]
 
 
