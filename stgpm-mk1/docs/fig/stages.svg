@@ -83,7 +83,9 @@
  <defs class="TextEmbeddedBitmaps"/>
  <g>
   <g id="id2" class="Master_Slide">
-   <g id="bg-id2" class="Background"/>
+   <g id="bg-id2" class="Background">
+    <path fill="rgb(255,255,255)" stroke="none" d="M 14850,20999 L 0,20999 0,0 29699,0 29699,20999 14850,20999 Z"/>
+   </g>
    <g id="bo-id2" class="BackgroundObjects"/>
   </g>
  </g>
