@@ -8,6 +8,7 @@ Design Notes
     * referencing GHC's STG concrete implementation
     * single thread
     * no hardware GC
+    * no floating point
 
   * implementation
     * simple hardware
@@ -24,6 +25,9 @@ Design Notes
   * 32bit data word
   * N(16?) bit address space
   * byte addressing (little endian like x86)
+  * dual word acessible heap
+  * dual word acessible stack
+  * stack heap serial chain
 
 
 # Stages
@@ -40,11 +44,10 @@ Design Notes
   * stage 4: 
     * register read
     * heap address gen
-    * (stack access)
+    * stack access
   * stage 5: 
     * heap access
     * operation
-    * (stack access)
   * stage 6: 
     * register write
 
