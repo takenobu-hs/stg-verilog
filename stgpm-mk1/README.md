@@ -1,10 +1,11 @@
 
-
 STG Physical Machine - mark1
+============================
 
 
 
-## figures
+figures
+-------
 
 processing stages
   ![processing stages](docs/fig/stages.svg)

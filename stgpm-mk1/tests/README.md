@@ -1,6 +1,9 @@
 
+tests
+=====
 
-## test benches
+test directories
+----------------
 
   * integ : integration tests
 
@@ -10,7 +13,8 @@
 
 
 
-## simulation environment
+simulation environment
+----------------------
 
 If you use iverilog, please install this.
 ```

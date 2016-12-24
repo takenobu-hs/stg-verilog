@@ -1,8 +1,9 @@
 
 Design Notes
-------------
+============
 
-# Basic concept
+Basic concept
+-------------
   * model
     * subset of STG abstract machine
     * referencing GHC's STG concrete implementation
@@ -18,7 +19,8 @@ Design Notes
     * synthesizable (potentially)
 
 
-# Architecture
+Architecture
+------------
   * in-order single issue
   * non pipelined
   * 7 stages
@@ -30,7 +32,8 @@ Design Notes
   * stack heap serial chain
 
 
-# Stages
+Stages
+------
   * stage 1:
     * code address gen
   * stage 2: 
@@ -52,7 +55,8 @@ Design Notes
     * register write
 
 
-# Instructions
+Instructions
+------------
   * Macro instructions
     * ap1, ap2, ...
     * alc1, alc2, ...
@@ -66,7 +70,8 @@ Design Notes
     * primitive operations
 
 
-# Signal naming rule (general)
+Signal naming rule (general)
+----------------------------
   * {block(id)}{stage}_{function}
     * block ::= i, d, r, e, m, x, t, g, x
     * id    ::= a, b, ...
@@ -77,7 +82,8 @@ Design Notes
       m5_rd_dt
 
 
-# Abbreviation
+Abbreviation
+------------
   ack    acknowledge
   addr   address
   clk    clock

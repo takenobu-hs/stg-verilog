@@ -1,7 +1,6 @@
 
-
 STG Physical Machine - mark1
-
+============================
 
   * stgpm1 :   : stgpm1 top
 
@@ -25,6 +24,4 @@ STG Physical Machine - mark1
 
   * lib    : - : library
   * include: - : include
-
-
 
