@@ -84,6 +84,7 @@ Signal naming rule (general)
 
 Abbreviation
 ------------
+```
   ack    acknowledge
   addr   address
   clk    clock
@@ -114,6 +115,7 @@ Abbreviation
   vld    valid
   we     write enable
   wt     write
+```
 
 
 
