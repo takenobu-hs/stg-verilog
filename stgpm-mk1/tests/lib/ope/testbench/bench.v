@@ -67,6 +67,41 @@ module top();
 `endif // SP1_DECR
 
 
+
+`ifdef SP1_COMP_EQ
+  reg     [DW-1:0]  a;
+  reg     [DW-1:0]  b;
+  wire              eq;
+
+  /* dut */
+  sp1_comp_eq #(DW) sp1_comp_eq(.a(a), .b(b), .eq(eq));
+
+  /* monitor */
+  initial begin
+    $monitor("monitor   : %7d: %h %h  %b",
+             $time, a, b, eq);
+  end
+`endif // SP1_COMP_EQ
+
+
+
+`ifdef SP1_COMP_GT
+  reg     [DW-1:0]  a;
+  reg     [DW-1:0]  b;
+  wire              gt;
+
+  /* dut */
+  sp1_comp_gt #(DW) sp1_comp_gt(.a(a), .b(b), .gt(gt));
+
+  /* monitor */
+  initial begin
+    $monitor("monitor   : %7d: %h %h  %b",
+             $time, a, b, gt);
+  end
+`endif // SP1_COMP_GT
+
+
+
   /* clock */
   initial begin
     #0 clk = LOW;
