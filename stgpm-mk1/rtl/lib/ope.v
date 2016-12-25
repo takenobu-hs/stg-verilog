@@ -1,7 +1,7 @@
 /* -----------------------------------------------------------------------------
  *
  * Operational logics
- *  - adder
+ *  - adder/subtractor
  *  - incrementer/decrementer
  *  - comparator
  *
@@ -14,25 +14,46 @@
 
 
 /* -----------------------------------------------------------------------------
- * adder
+ * adder/subtractor
  * -------------------------------------------------------------------------- */
 
 /* adder */
 module sp1_adder(
-  a,
-  b,
+  a0,
+  a1,
   y,
   c
 );
 
   parameter DW = 32;            // data bit width
 
-  input   [DW-1:0]  a;          // input operand a
-  input   [DW-1:0]  b;          // input operand b
+  input   [DW-1:0]  a0;         // input operand 0
+  input   [DW-1:0]  a1;         // input operand 1
   output  [DW-1:0]  y;          // added data
   output            c;          // carry bit
 
-  assign {c, y} = a + b;
+  assign {c, y} = a0 + a1;
+
+endmodule
+
+
+
+/* subtractor */
+module sp1_sub(
+  a0,
+  a1,
+  y,
+  b
+);
+
+  parameter DW = 32;            // data bit width
+
+  input   [DW-1:0]  a0;         // input operand 0
+  input   [DW-1:0]  a1;         // input operand 1
+  output  [DW-1:0]  y;          // subtranted data
+  output            b;          // borrow bit
+
+  assign {b, y} = a0 - a1;
 
 endmodule
 
@@ -84,18 +105,18 @@ endmodule
 
 /* equal comparator */
 module sp1_comp_eq(
-  a,
-  b,
+  a0,
+  a1,
   eq
 );
 
   parameter DW = 32;            // data bit width
 
-  input   [DW-1:0]  a;          // input operand a
-  input   [DW-1:0]  b;          // input operand b
-  output            eq;         // compare result (1:a==b / 0:not a==b)
+  input   [DW-1:0]  a0;         // input operand 0
+  input   [DW-1:0]  a1;         // input operand 1
+  output            eq;         // compare result (1:a0==a1 / 0:not a0==a1)
 
-  assign eq = (a == b);
+  assign eq = (a0 == a1);
 
 endmodule
 
@@ -103,18 +124,18 @@ endmodule
 
 /* greater-than comparator */
 module sp1_comp_gt(
-  a,
-  b,
+  a0,
+  a1,
   gt
 );
 
   parameter DW = 32;            // data bit width
 
-  input   [DW-1:0]  a;          // input operand a
-  input   [DW-1:0]  b;          // input operand b
-  output            gt;         // compare result (1:a>b / 0:a<=b)
+  input   [DW-1:0]  a0;         // input operand 0
+  input   [DW-1:0]  a1;         // input operand 1
+  output            gt;         // compare result (1:a0>a1 / 0:a0<=a1)
 
-  assign gt = (a > b);
+  assign gt = (a0 > a1);
 
 endmodule
 

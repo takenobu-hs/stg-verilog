@@ -17,20 +17,38 @@ module top();
 
 
 `ifdef SP1_ADDER
-  reg     [DW-1:0]  a;
-  reg     [DW-1:0]  b;
+  reg     [DW-1:0]  a0;
+  reg     [DW-1:0]  a1;
   wire    [DW-1:0]  y;
   wire              c;
 
   /* dut */
-  sp1_adder #(DW) sp1_adder(.a(a), .b(b), .y(y), .c(c));
+  sp1_adder #(DW) sp1_adder(.a0(a0), .a1(a1), .y(y), .c(c));
 
   /* monitor */
   initial begin
     $monitor("monitor   : %7d: %h %h  %b %h",
-             $time, a, b, c, y);
+             $time, a0, a1, c, y);
   end
 `endif // SP1_ADDER
+
+
+
+`ifdef SP1_SUB
+  reg     [DW-1:0]  a0;
+  reg     [DW-1:0]  a1;
+  wire    [DW-1:0]  y;
+  wire              b;
+
+  /* dut */
+  sp1_sub #(DW) sp1_sub(.a0(a0), .a1(a1), .y(y), .b(b));
+
+  /* monitor */
+  initial begin
+    $monitor("monitor   : %7d: %h %h  %b %h",
+             $time, a0, a1, b, y);
+  end
+`endif // SP1_SUB
 
 
 
@@ -69,34 +87,34 @@ module top();
 
 
 `ifdef SP1_COMP_EQ
-  reg     [DW-1:0]  a;
-  reg     [DW-1:0]  b;
+  reg     [DW-1:0]  a0;
+  reg     [DW-1:0]  a1;
   wire              eq;
 
   /* dut */
-  sp1_comp_eq #(DW) sp1_comp_eq(.a(a), .b(b), .eq(eq));
+  sp1_comp_eq #(DW) sp1_comp_eq(.a0(a0), .a1(a1), .eq(eq));
 
   /* monitor */
   initial begin
     $monitor("monitor   : %7d: %h %h  %b",
-             $time, a, b, eq);
+             $time, a0, a1, eq);
   end
 `endif // SP1_COMP_EQ
 
 
 
 `ifdef SP1_COMP_GT
-  reg     [DW-1:0]  a;
-  reg     [DW-1:0]  b;
+  reg     [DW-1:0]  a0;
+  reg     [DW-1:0]  a1;
   wire              gt;
 
   /* dut */
-  sp1_comp_gt #(DW) sp1_comp_gt(.a(a), .b(b), .gt(gt));
+  sp1_comp_gt #(DW) sp1_comp_gt(.a0(a0), .a1(a1), .gt(gt));
 
   /* monitor */
   initial begin
     $monitor("monitor   : %7d: %h %h  %b",
-             $time, a, b, gt);
+             $time, a0, a1, gt);
   end
 `endif // SP1_COMP_GT
 
