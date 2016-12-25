@@ -2,6 +2,9 @@
 STG Physical Machine - mark1
 ============================
 
+Modules and directories
+-----------------------
+```
   * stgpm1 :   : stgpm1 top
 
   * crmu   : - : clock, reset and mode control unit
@@ -24,4 +27,5 @@ STG Physical Machine - mark1
 
   * lib    : - : library
   * include: - : include
+```
 
