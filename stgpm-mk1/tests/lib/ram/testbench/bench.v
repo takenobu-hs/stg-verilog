@@ -18,7 +18,7 @@ module top();
 
   reg              cs;
   reg              we;
-  reg     [AW-1:0] adr;
+  reg     [AW-1:0] adrs;
   reg     [DW-1:0] din;
   wire    [DW-1:0] dout;
 
@@ -28,7 +28,7 @@ module top();
     .clk(clk),
     .cs(cs),
     .we(we),
-    .adr(adr),
+    .adrs(adrs),
     .din(din),
     .dout(dout)
   );
@@ -78,7 +78,7 @@ module top();
   /* monitor */
   initial begin
     $monitor("monitor   : %7d: %b %b %b %h %h %h",
-             $time, rst, cs, we, adr, din, dout);
+             $time, rst, cs, we, adrs, din, dout);
   end
 
 
@@ -148,43 +148,43 @@ module top();
 
   /* write to ram */
   task write_ram;
-    input   [AW-1:0]   i_adr;
+    input   [AW-1:0]   i_adrs;
     input   [DW-1:0]   i_din;
     begin
       @(negedge clk);
       #1;
-      cs  = HIGH;
-      we  = HIGH;
-      adr = i_adr;
-      din = i_din;
-      $display("write_ram : %7d: (adr,din) <- (%h, %h)", $time, i_adr, i_din);
+      cs   = HIGH;
+      we   = HIGH;
+      adrs = i_adrs;
+      din  = i_din;
+      $display("write_ram : %7d: (adrs,din) <- (%h, %h)", $time, i_adrs, i_din);
 
       @(posedge clk);
       #1;
-      cs  = LOW;
-      we  = UNK;
-      adr = {AW{UNK}};
-      din = {DW{UNK}};
+      cs   = LOW;
+      we   = UNK;
+      adrs = {AW{UNK}};
+      din  = {DW{UNK}};
     end
   endtask
 
 
   /* read from ram */
   task read_ram;
-    input   [AW-1:0]   i_adr;
+    input   [AW-1:0]   i_adrs;
     begin
       @(negedge clk);
       #1;
-      cs  = HIGH;
-      we  = LOW;
-      adr = i_adr;
-      $display("read_ram  : %7d: (adr) <- (%h)", $time, i_adr);
+      cs   = HIGH;
+      we   = LOW;
+      adrs = i_adrs;
+      $display("read_ram  : %7d: (adrs) <- (%h)", $time, i_adrs);
 
       @(posedge clk);
       #1;
-      cs  = LOW;
-      we  = UNK;
-      adr = {AW{UNK}};
+      cs   = LOW;
+      we   = UNK;
+      adrs = {AW{UNK}};
       $display("read_ram  : %7d: (dout) -> (%h)", $time, dout);
     end
   endtask
@@ -195,18 +195,18 @@ module top();
     begin
       @(negedge clk);
       #1;
-      cs  = UNK;
-      we  = HIGH;
-      adr = {AW{LOW}};
-      din = {DW{LOW}};
-      $display("unk_cs_ram : %7d: (adr,din) <- (%h, %h)", $time, adr, din);
+      cs   = UNK;
+      we   = HIGH;
+      adrs = {AW{LOW}};
+      din  = {DW{LOW}};
+      $display("unk_cs_ram : %7d: (adrs,din) <- (%h, %h)", $time, adrs, din);
 
       @(posedge clk);
       #1;
-      cs  = LOW;
-      we  = UNK;
-      adr = {AW{UNK}};
-      din = {DW{UNK}};
+      cs   = LOW;
+      we   = UNK;
+      adrs = {AW{UNK}};
+      din  = {DW{UNK}};
     end
   endtask
 
@@ -216,18 +216,18 @@ module top();
     begin
       @(negedge clk);
       #1;
-      cs  = HIGH;
-      we  = UNK;
-      adr = {AW{HIGH}};
-      din = {DW{HIGH}};
-      $display("unk_cs_ram : %7d: (adr,din) <- (%h, %h)", $time, adr, din);
+      cs   = HIGH;
+      we   = UNK;
+      adrs = {AW{HIGH}};
+      din  = {DW{HIGH}};
+      $display("unk_cs_ram : %7d: (adrs,din) <- (%h, %h)", $time, adrs, din);
 
       @(posedge clk);
       #1;
-      cs  = LOW;
-      we  = UNK;
-      adr = {AW{UNK}};
-      din = {DW{UNK}};
+      cs   = LOW;
+      we   = UNK;
+      adrs = {AW{UNK}};
+      din  = {DW{UNK}};
     end
   endtask
 
