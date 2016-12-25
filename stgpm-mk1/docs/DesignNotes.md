@@ -21,15 +21,23 @@ Basic concept
 
 Architecture
 ------------
-  * in-order single issue
-  * non pipelined
-  * 7 stages
-  * 32bit data word
-  * N(16?) bit address space
-  * byte addressing (little endian like x86)
-  * dual word acessible heap
-  * dual word acessible stack
-  * stack heap serial chain
+  * basic
+    * in-order single issue
+    * non pipelined
+    * 7 stages
+    * 32bit data word
+
+  * memory/addressing
+    * N(16?) bit address space
+    * byte addressing (little endian like x86)
+    * dual word accessible heap
+    * dual word accessible stack
+    * stack-heap serial chain
+    * address mapping for registers, heap and stack
+    * info-table access (T.B.D.)
+
+  * system
+    * system call/exception (T.B.D.)
 
 
 Stages
@@ -59,8 +67,8 @@ Instructions
 ------------
   * Macro instructions
     * ap1, ap2, ...
-    * alc1, alc2, ...
-    * jumpStackTop, ...
+    * aloc1, aloc2, ...
+    * enter, jumpStackTop, ...
     * primop, ...
 
   * Micro instructions
@@ -70,8 +78,21 @@ Instructions
     * primitive operations
 
 
+Instruction mapping
+-------------------
+  * basic
+    * variable length 1 to 4
+    * map all 0 to nop (or halt)
+    * represent info-table with nop
+    * fast branch decoding
+
+  * mapping
+    * {length}{macro/micro}{...}
+
+
 Signal naming rule (general)
 ----------------------------
+```
   * {block(id)}{stage}_{function}
     * block ::= i, d, r, e, m, x, t, g, x
     * id    ::= a, b, ...
@@ -80,13 +101,14 @@ Signal naming rule (general)
       i0_inst
       d2_op
       m5_rd_dt
+```
 
 
 Abbreviation
 ------------
 ```
   ack    acknowledge
-  addr   address
+  adrs   address
   clk    clock
   cm     static code memory
   cs     chip select
@@ -118,4 +140,10 @@ Abbreviation
 ```
 
 
-
+References
+----------
+  * STG
+    * https://ghc.haskell.org/trac/ghc/wiki/Commentary/Rts/HaskellExecution
+    * https://ghc.haskell.org/trac/ghc/wiki/Commentary/Compiler/StgSynType
+    * https://ghc.haskell.org/trac/ghc/wiki/Commentary/Rts/Storage/HeapObjects
+    * https://ghc.haskell.org/trac/ghc/wiki/Commentary/Compiler/GeneratedCode
