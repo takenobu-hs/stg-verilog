@@ -5,11 +5,9 @@ tests
 test directories
 ----------------
 
-  * integ : integration tests
-
-  * unit : unit tests
-
-  * lib  : library tests
+  * integ/ - integration tests
+  * unit/  - unit tests
+  * lib/   - library tests
 
 
 
