@@ -1,10 +1,20 @@
+/* -----------------------------------------------------------------------------
+ *
+ * Functional logics
+ *  - multiplexer
+ *  - bit decoder
+ *
+ * -------------------------------------------------------------------------- */
 
 
 `include "sp1_common.h"
 
 
-/* mux with decoded one-hot select signal */
+/* -----------------------------------------------------------------------------
+ * mux with decoded one-hot select signal
+ * -------------------------------------------------------------------------- */
 
+/* 2-to-1 mux */
 module sp1_muxd2(
   a0,
   a1,
@@ -12,12 +22,12 @@ module sp1_muxd2(
   y
 );
 
-  parameter DW = 32;
+  parameter DW = 32;            // data bit width
 
-  input   [DW-1:0]  a0;
-  input   [DW-1:0]  a1;
-  input   [1:0]     s;
-  output  [DW-1:0]  y;
+  input   [DW-1:0]  a0;         // input data
+  input   [DW-1:0]  a1;         // input data
+  input   [1:0]     s;          // one-hot selecter
+  output  [DW-1:0]  y;          // output data
 
   assign y = ({DW{s[0]}} & a0) |
              ({DW{s[1]}} & a1);
@@ -25,6 +35,7 @@ module sp1_muxd2(
 endmodule
 
 
+/* 3-to-1 mux */
 module sp1_muxd3(
   a0,
   a1,
@@ -33,13 +44,13 @@ module sp1_muxd3(
   y
 );
 
-  parameter DW = 32;
+  parameter DW = 32;            // data bit width
 
-  input   [DW-1:0]  a0;
-  input   [DW-1:0]  a1;
-  input   [DW-1:0]  a2;
-  input   [2:0]     s;
-  output  [DW-1:0]  y;
+  input   [DW-1:0]  a0;         // input data
+  input   [DW-1:0]  a1;         // input data
+  input   [DW-1:0]  a2;         // input data
+  input   [2:0]     s;          // one-hot selecter
+  output  [DW-1:0]  y;          // output data
 
   assign y = ({DW{s[0]}} & a0) |
              ({DW{s[1]}} & a1) |
@@ -48,6 +59,7 @@ module sp1_muxd3(
 endmodule
 
 
+/* 4-to-1 mux */
 module sp1_muxd4(
   a0,
   a1,
@@ -57,14 +69,14 @@ module sp1_muxd4(
   y
 );
 
-  parameter DW = 32;
+  parameter DW = 32;            // data bit width
 
-  input   [DW-1:0]  a0;
-  input   [DW-1:0]  a1;
-  input   [DW-1:0]  a2;
-  input   [DW-1:0]  a3;
-  input   [3:0]     s;
-  output  [DW-1:0]  y;
+  input   [DW-1:0]  a0;         // input data
+  input   [DW-1:0]  a1;         // input data
+  input   [DW-1:0]  a2;         // input data
+  input   [DW-1:0]  a3;         // input data
+  input   [3:0]     s;          // one-hot selecter
+  output  [DW-1:0]  y;          // output data
 
   assign y = ({DW{s[0]}} & a0) |
              ({DW{s[1]}} & a1) |
@@ -74,6 +86,7 @@ module sp1_muxd4(
 endmodule
 
 
+/* 8-to-1 mux */
 module sp1_muxd8(
   a0,
   a1,
@@ -87,18 +100,18 @@ module sp1_muxd8(
   y
 );
 
-  parameter DW = 32;
+  parameter DW = 32;            // data bit width
 
-  input   [DW-1:0]  a0;
-  input   [DW-1:0]  a1;
-  input   [DW-1:0]  a2;
-  input   [DW-1:0]  a3;
-  input   [DW-1:0]  a4;
-  input   [DW-1:0]  a5;
-  input   [DW-1:0]  a6;
-  input   [DW-1:0]  a7;
-  input   [7:0]     s;
-  output  [DW-1:0]  y;
+  input   [DW-1:0]  a0;         // input data
+  input   [DW-1:0]  a1;         // input data
+  input   [DW-1:0]  a2;         // input data
+  input   [DW-1:0]  a3;         // input data
+  input   [DW-1:0]  a4;         // input data
+  input   [DW-1:0]  a5;         // input data
+  input   [DW-1:0]  a6;         // input data
+  input   [DW-1:0]  a7;         // input data
+  input   [7:0]     s;          // one-hot selecter
+  output  [DW-1:0]  y;          // output data
 
   assign y = ({DW{s[0]}} & a0) |
              ({DW{s[1]}} & a1) |
@@ -113,8 +126,11 @@ endmodule
 
 
 
-/* mux with encoded priority select signal */
+/* -----------------------------------------------------------------------------
+ * mux with encoded priority select signal
+ * -------------------------------------------------------------------------- */
 
+/* 2-to-1 mux */
 module sp1_mux2(
   a0,
   a1,
@@ -122,12 +138,12 @@ module sp1_mux2(
   y
 );
 
-  parameter DW = 32;
+  parameter DW = 32;            // data bit width
 
-  input   [DW-1:0]  a0;
-  input   [DW-1:0]  a1;
-  input             s;
-  output  [DW-1:0]  y;
+  input   [DW-1:0]  a0;         // input data
+  input   [DW-1:0]  a1;         // input data
+  input             s;          // one-hot selecter
+  output  [DW-1:0]  y;          // output data
 
   wire    [1:0]     sd;
 
@@ -137,6 +153,7 @@ module sp1_mux2(
 endmodule
 
 
+/* 3-to-1 mux */
 module sp1_mux3(
   a0,
   a1,
@@ -145,13 +162,13 @@ module sp1_mux3(
   y
 );
 
-  parameter DW = 32;
+  parameter DW = 32;            // data bit width
 
-  input   [DW-1:0]  a0;
-  input   [DW-1:0]  a1;
-  input   [DW-1:0]  a2;
-  input   [1:0]     s;
-  output  [DW-1:0]  y;
+  input   [DW-1:0]  a0;         // input data
+  input   [DW-1:0]  a1;         // input data
+  input   [DW-1:0]  a2;         // input data
+  input   [1:0]     s;          // one-hot selecter
+  output  [DW-1:0]  y;          // output data
 
   wire    [2:0]     sd;
 
@@ -163,6 +180,7 @@ module sp1_mux3(
 endmodule
 
 
+/* 4-to-1 mux */
 module sp1_mux4(
   a0,
   a1,
@@ -172,14 +190,14 @@ module sp1_mux4(
   y
 );
 
-  parameter DW = 32;
+  parameter DW = 32;            // data bit width
 
-  input   [DW-1:0]  a0;
-  input   [DW-1:0]  a1;
-  input   [DW-1:0]  a2;
-  input   [DW-1:0]  a3;
-  input   [1:0]     s;
-  output  [DW-1:0]  y;
+  input   [DW-1:0]  a0;         // input data
+  input   [DW-1:0]  a1;         // input data
+  input   [DW-1:0]  a2;         // input data
+  input   [DW-1:0]  a3;         // input data
+  input   [1:0]     s;          // one-hot selecter
+  output  [DW-1:0]  y;          // output data
 
   wire    [3:0]     sd;
 
@@ -189,6 +207,7 @@ module sp1_mux4(
 endmodule
 
 
+/* 8-to-1 mux */
 module sp1_mux8(
   a0,
   a1,
@@ -202,18 +221,18 @@ module sp1_mux8(
   y
 );
 
-  parameter DW = 32;
+  parameter DW = 32;            // data bit width
 
-  input   [DW-1:0]  a0;
-  input   [DW-1:0]  a1;
-  input   [DW-1:0]  a2;
-  input   [DW-1:0]  a3;
-  input   [DW-1:0]  a4;
-  input   [DW-1:0]  a5;
-  input   [DW-1:0]  a6;
-  input   [DW-1:0]  a7;
-  input   [2:0]     s;
-  output  [DW-1:0]  y;
+  input   [DW-1:0]  a0;         // input data
+  input   [DW-1:0]  a1;         // input data
+  input   [DW-1:0]  a2;         // input data
+  input   [DW-1:0]  a3;         // input data
+  input   [DW-1:0]  a4;         // input data
+  input   [DW-1:0]  a5;         // input data
+  input   [DW-1:0]  a6;         // input data
+  input   [DW-1:0]  a7;         // input data
+  input   [2:0]     s;          // one-hot selecter
+  output  [DW-1:0]  y;          // output data
 
   wire    [7:0]     sd;
 
@@ -226,15 +245,18 @@ endmodule
 
 
 
-/* one-hot decoder */
+/* -----------------------------------------------------------------------------
+ * one-hot decoder
+ * -------------------------------------------------------------------------- */
 
+/* 2-to-4 decoder */
 module sp1_dec2to4(
   e,
   d,
 );
 
-  input   [1:0]     e;
-  output  [3:0]     d;
+  input   [1:0]     e;		// encoded input data
+  output  [3:0]     d;          // decoded output data
 
   assign d = (e == 2'd0) ? 4'b0001 :
              (e == 2'd1) ? 4'b0010 :
@@ -244,13 +266,14 @@ module sp1_dec2to4(
 endmodule
 
 
+/* 3-to-8 decoder */
 module sp1_dec3to8(
   e,
   d,
 );
 
-  input   [2:0]     e;
-  output  [7:0]     d;
+  input   [2:0]     e;		// encoded input data
+  output  [7:0]     d;		// decoded output data
 
   assign d = (e == 3'd0) ? 8'b00000001 :
              (e == 3'd1) ? 8'b00000010 :
