@@ -2,12 +2,15 @@
  *
  * FF
  *
+ * Note: This is behavior model.
+ *       Replace to your target technology cell if you need.
  * -------------------------------------------------------------------------- */
 
 
 `include "sp1_common.h"
 
 
+/* ff with write enable */
 module sp1_ff(
   rst,
   clk,
