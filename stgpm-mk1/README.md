@@ -27,20 +27,9 @@ Design information
 Directories
 -----------
 
-* docs/
-
-  documents
-
-* rtl/
-
-  physical design with verilog
-
-* tests/
-
-  test-benches and test-patterns
-
-* utils/
-
-  uilities
+* docs/  - documents
+* rtl/   - physical design with verilog
+* tests/ - test-benches and test-patterns
+* utils/ - uilities
 
 
