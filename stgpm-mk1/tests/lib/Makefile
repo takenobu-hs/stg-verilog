@@ -35,7 +35,7 @@ VFILES=
 #-- run
 %.run : %.comp
 	./exe | tee $*.run.stdout
-#	- mv -f heap.dump $*.heap.dump
+#	@- test -f heap.dump && mv -f heap.dump $*.heap.dump
 
 	
 
@@ -48,6 +48,7 @@ wave :
 %.clean:
 	- rm -f exe
 	- rm -f pattern.v
+	- rm -f heap.dump
 	- rm -f $*.run.stdout
 	- rm -f $*.heap.dump
 	- rm -f $*.comp
@@ -57,7 +58,7 @@ clean:
 	- rm -f pattern.v
 	- rm -f wave.vcd
 	- rm -f *.run.stdout
-	- rm -f *.heap.dump
+	- rm -f *.dump
 	- rm -f *.comp
 
 
