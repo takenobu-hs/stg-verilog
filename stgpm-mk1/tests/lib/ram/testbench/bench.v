@@ -232,6 +232,23 @@ module top();
   endtask
 
 
+  /* dump ram */
+  task dump_ram;
+    integer fm, i;
+    begin
+
+      @(posedge clk);
+      #1;
+      $display("dump_ram  : dump memory");
+
+      fm = $fopen("heap.dump");
+      for (i=0; i<DS; i=i+1) begin
+        $fdisplay(fm, "%h: %h", i, top.ram.mem[i]);
+      end
+    end
+  endtask
+
+
   /* finish */
   task halt;
     begin

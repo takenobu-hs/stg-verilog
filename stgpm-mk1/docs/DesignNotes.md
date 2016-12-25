@@ -117,12 +117,14 @@ Abbreviation
   dst    destination
   dt     data
   en     enable
+  ev     even
   fw     forwarding
   hm     heap memory
   imm    immediate
   inst   instruction
   ld     load
   mem    memory
+  od     odd
   op     operation
   pc     program counter
   rd     read

@@ -14,6 +14,7 @@
     test_ram();
 
     repeat(5) @(posedge clk);
+    dump_ram();
     halt();
   end
 
