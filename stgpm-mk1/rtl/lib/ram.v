@@ -2,12 +2,15 @@
  *
  * RAM
  *
+ * Note: This is behavior model.
+ *       Replace to your target technology cell if you need.
  * -------------------------------------------------------------------------- */
 
 
 `include "sp1_common.h"
 
 
+/* single-port basic ram */
 module sp1_ram(
   rst,
   clk,
@@ -22,7 +25,7 @@ module sp1_ram(
   parameter DW = 32;            // data bit width
   parameter DS = 1<<AW;         // data row size
 
-  input             rst;        // reset (unuse)
+  input             rst;        // reset (unuse in this model)
   input             clk;        // clock
   input             cs;         // chip select (1:access / 0:hold)
   input             we;         // write enable (1:write / 0:read)
