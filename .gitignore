@@ -2,6 +2,7 @@ tmp
 exe
 *.comp
 *.run.stdout
+*.dump
 pattern.v
 *.gtkw
 *.vcd
