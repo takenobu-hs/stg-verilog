@@ -82,7 +82,7 @@ module top();
   end
 
 
-  /* ff test tasks */
+  /* ram test tasks */
   task test_ram;
     begin
       /* basic data */
