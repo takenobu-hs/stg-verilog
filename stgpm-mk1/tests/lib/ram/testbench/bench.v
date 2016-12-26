@@ -241,7 +241,7 @@ module top();
       #1;
       $display("dump_ram  : dump memory");
 
-      fm = $fopen("heap.dump");
+      fm = $fopen("mem.ramdump");
       for (i=0; i<DS; i=i+1) begin
         $fdisplay(fm, "%h: %h", i, top.ram.mem[i]);
       end
