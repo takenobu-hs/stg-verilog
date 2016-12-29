@@ -1,9 +1,11 @@
 tmp
 exe
-*.comp
-*.run.stdout
-*.dump
 pattern.v
-*.gtkw
+*.comp
+*.run
+*.run.stdout
+*.run.*dump
+*.dump
 *.vcd
+*.gtkw
 *.odg
