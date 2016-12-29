@@ -109,6 +109,7 @@ Abbreviation
 ```
   ack    acknowledge
   adrs   address
+  asc    access
   clk    clock
   cm     static code memory
   cs     chip select
@@ -142,6 +143,14 @@ Abbreviation
 ```
 
 
+Performance issue of STG
+------------------------
+  * longest-path: read stack (top) -> read heap (info-ptr) -> jump to code
+  * to store multi words to heap (aligned to dual word?)
+  * to store multi words to stack
+  * pre address modification of Hp
+
+
 References
 ----------
   * STG
@@ -149,3 +158,4 @@ References
     * https://ghc.haskell.org/trac/ghc/wiki/Commentary/Compiler/StgSynType
     * https://ghc.haskell.org/trac/ghc/wiki/Commentary/Rts/Storage/HeapObjects
     * https://ghc.haskell.org/trac/ghc/wiki/Commentary/Compiler/GeneratedCode
+    * https://github.com/quchen/stgi
