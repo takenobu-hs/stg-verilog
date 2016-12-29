@@ -1,0 +1,5 @@
+monitor   :       0: xxxxxxxx xxxxxxxx  x xxxxxxxx
+monitor   :      80: 00000001 00000002  0 00000003
+monitor   :      90: 12345678 11111111  0 23456789
+monitor   :     100: fffffffe 00000001  0 ffffffff
+monitor   :     110: ffffffff 00000001  1 00000000

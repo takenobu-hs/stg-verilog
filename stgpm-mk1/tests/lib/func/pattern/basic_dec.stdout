@@ -1,0 +1,11 @@
+monitor   :       0: x  x xx
+monitor   :      81: 0  1 01
+monitor   :      91: 1  2 02
+monitor   :     101: 2  4 04
+monitor   :     111: 3  8 08
+monitor   :     121: 4  1 10
+monitor   :     131: 5  2 20
+monitor   :     141: 6  4 40
+monitor   :     151: 7  8 80
+monitor   :     161: x  x xx
+monitor   :     171: 0  1 01

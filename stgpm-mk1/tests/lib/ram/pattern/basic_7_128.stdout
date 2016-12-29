@@ -1,0 +1,126 @@
+monitor   :       0: 1 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :      51: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :      96: (adrs) <- (00)
+monitor   :      96: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     101: (dout) -> (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)
+monitor   :     101: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     116: (adrs,din) <- (00, 000000000000000000000000ffffffff)
+monitor   :     116: 0 1 1 00 000000000000000000000000ffffffff xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     121: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     126: (adrs) <- (00)
+monitor   :     126: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     130: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000ffffffff
+read_ram  :     131: (dout) -> (000000000000000000000000ffffffff)
+monitor   :     131: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000ffffffff
+monitor   :     140: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     146: (adrs,din) <- (00, 00000000000000000000000000000000)
+monitor   :     146: 0 1 1 00 00000000000000000000000000000000 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     151: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     156: (adrs) <- (00)
+monitor   :     156: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     160: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 00000000000000000000000000000000
+read_ram  :     161: (dout) -> (00000000000000000000000000000000)
+monitor   :     161: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 00000000000000000000000000000000
+monitor   :     170: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     176: (adrs,din) <- (00, 00000000000000000000000012345678)
+monitor   :     176: 0 1 1 00 00000000000000000000000012345678 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     181: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     186: (adrs) <- (00)
+monitor   :     186: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     190: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 00000000000000000000000012345678
+read_ram  :     191: (dout) -> (00000000000000000000000012345678)
+monitor   :     191: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 00000000000000000000000012345678
+monitor   :     200: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     206: (adrs,din) <- (00, 000000000000000000000000cafecafe)
+monitor   :     206: 0 1 1 00 000000000000000000000000cafecafe xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     211: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     216: (adrs) <- (00)
+monitor   :     216: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     220: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000cafecafe
+read_ram  :     221: (dout) -> (000000000000000000000000cafecafe)
+monitor   :     221: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000cafecafe
+monitor   :     230: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     236: (adrs,din) <- (00, 000000000000000000000000cafecafe)
+monitor   :     236: 0 1 1 00 000000000000000000000000cafecafe xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     241: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     246: (adrs) <- (00)
+monitor   :     246: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     250: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000cafecafe
+read_ram  :     251: (dout) -> (000000000000000000000000cafecafe)
+monitor   :     251: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000cafecafe
+monitor   :     260: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     266: (adrs,din) <- (7f, 000000000000000000000000beefbeef)
+monitor   :     266: 0 1 1 7f 000000000000000000000000beefbeef xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     271: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     276: (adrs) <- (7f)
+monitor   :     276: 0 1 0 7f xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     280: 0 1 0 7f xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000beefbeef
+read_ram  :     281: (dout) -> (000000000000000000000000beefbeef)
+monitor   :     281: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000beefbeef
+monitor   :     290: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     296: (adrs,din) <- (01, 00000000000000000000000033333333)
+monitor   :     296: 0 1 1 01 00000000000000000000000033333333 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     301: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     306: (adrs,din) <- (02, 000000000000000000000000cccccccc)
+monitor   :     306: 0 1 1 02 000000000000000000000000cccccccc xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     311: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     316: (adrs,din) <- (03, 00000000000000000000000055555555)
+monitor   :     316: 0 1 1 03 00000000000000000000000055555555 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     321: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     326: (adrs,din) <- (04, 000000000000000000000000aaaaaaaa)
+monitor   :     326: 0 1 1 04 000000000000000000000000aaaaaaaa xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     331: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     336: (adrs) <- (01)
+monitor   :     336: 0 1 0 01 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     340: 0 1 0 01 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 00000000000000000000000033333333
+read_ram  :     341: (dout) -> (00000000000000000000000033333333)
+monitor   :     341: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 00000000000000000000000033333333
+read_ram  :     346: (adrs) <- (02)
+monitor   :     346: 0 1 0 02 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 00000000000000000000000033333333
+monitor   :     350: 0 1 0 02 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000cccccccc
+read_ram  :     351: (dout) -> (000000000000000000000000cccccccc)
+monitor   :     351: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000cccccccc
+read_ram  :     356: (adrs) <- (03)
+monitor   :     356: 0 1 0 03 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000cccccccc
+monitor   :     360: 0 1 0 03 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 00000000000000000000000055555555
+read_ram  :     361: (dout) -> (00000000000000000000000055555555)
+monitor   :     361: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 00000000000000000000000055555555
+read_ram  :     366: (adrs) <- (04)
+monitor   :     366: 0 1 0 04 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 00000000000000000000000055555555
+monitor   :     370: 0 1 0 04 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000aaaaaaaa
+read_ram  :     371: (dout) -> (000000000000000000000000aaaaaaaa)
+monitor   :     371: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000aaaaaaaa
+monitor   :     380: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     386: (adrs,din) <- (00, 000000000000000000000000beefcafe)
+monitor   :     386: 0 1 1 00 000000000000000000000000beefcafe xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     391: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     396: (adrs) <- (00)
+monitor   :     396: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     400: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000beefcafe
+read_ram  :     401: (dout) -> (000000000000000000000000beefcafe)
+monitor   :     401: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000beefcafe
+unk_cs_ram :     406: (adrs,din) <- (00, 00000000000000000000000000000000)
+monitor   :     406: 0 x 1 00 00000000000000000000000000000000 000000000000000000000000beefcafe
+monitor   :     410: 0 x 1 00 00000000000000000000000000000000 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     411: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     416: (adrs) <- (00)
+monitor   :     416: 0 1 0 00 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     421: (dout) -> (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)
+monitor   :     421: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+write_ram :     436: (adrs,din) <- (7f, 000000000000000000000000cafebeef)
+monitor   :     436: 0 1 1 7f 000000000000000000000000cafebeef xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     441: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     446: (adrs) <- (7f)
+monitor   :     446: 0 1 0 7f xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     450: 0 1 0 7f xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000cafebeef
+read_ram  :     451: (dout) -> (000000000000000000000000cafebeef)
+monitor   :     451: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 000000000000000000000000cafebeef
+unk_cs_ram :     456: (adrs,din) <- (7f, ffffffffffffffffffffffffffffffff)
+monitor   :     456: 0 1 x 7f ffffffffffffffffffffffffffffffff 000000000000000000000000cafebeef
+monitor   :     460: 0 1 x 7f ffffffffffffffffffffffffffffffff xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+monitor   :     461: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     466: (adrs) <- (7f)
+monitor   :     466: 0 1 0 7f xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+read_ram  :     471: (dout) -> (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)
+monitor   :     471: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+dump_ram  : dump memory
