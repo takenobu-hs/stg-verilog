@@ -1,0 +1,119 @@
+monitor   :       0: 1 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :      51: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :          0#
+write_ram :     106: <- (1,1, 0,0, 00000000,00000000, xxxxxxxx,xxxxxxxx)
+monitor   :     106: 0 1 1 0 0  00000000 00000000  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     111: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :         10#
+write_ram :     126: <- (1,1, 1,1, 00000010,00000014, 01234567,89abcdef)
+monitor   :     126: 0 1 1 1 1  00000010 00000014  01234567 89abcdef  xxxxxxxx xxxxxxxx
+monitor   :     131: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     136: <- (1,1, 0,0, 00000010,00000014, xxxxxxxx,xxxxxxxx)
+monitor   :     136: 0 1 1 0 0  00000010 00000014  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     140: 0 1 1 0 0  00000010 00000014  xxxxxxxx xxxxxxxx  01234567 89abcdef
+monitor   :     141: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  01234567 89abcdef
+write_ram :     146: <- (1,1, 1,1, 00000ff8,00000ffc, fedcba98,76543210)
+monitor   :     146: 0 1 1 1 1  00000ff8 00000ffc  fedcba98 76543210  01234567 89abcdef
+monitor   :     150: 0 1 1 1 1  00000ff8 00000ffc  fedcba98 76543210  xxxxxxxx xxxxxxxx
+monitor   :     151: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     156: <- (1,1, 0,0, 00000ff8,00000ffc, xxxxxxxx,xxxxxxxx)
+monitor   :     156: 0 1 1 0 0  00000ff8 00000ffc  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     160: 0 1 1 0 0  00000ff8 00000ffc  xxxxxxxx xxxxxxxx  fedcba98 76543210
+monitor   :     161: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  fedcba98 76543210
+monitor   :     170: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :         20#
+write_ram :     176: <- (1,0, 1,1, 00000021,00000021, 22222222,xxxxxxxx)
+monitor   :     176: 0 1 0 1 1  00000021 00000021  22222222 xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     181: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     186: <- (1,0, 0,1, 00000021,00000021, xxxxxxxx,xxxxxxxx)
+monitor   :     186: 0 1 0 0 1  00000021 00000021  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     190: 0 1 0 0 1  00000021 00000021  xxxxxxxx xxxxxxxx  22222222 xxxxxxxx
+monitor   :     191: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  22222222 xxxxxxxx
+write_ram :     196: <- (1,0, 1,1, 00000032,00000032, 33333333,xxxxxxxx)
+monitor   :     196: 0 1 0 1 1  00000032 00000032  33333333 xxxxxxxx  22222222 xxxxxxxx
+monitor   :     200: 0 1 0 1 1  00000032 00000032  33333333 xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     201: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     206: <- (1,0, 0,1, 00000032,00000032, xxxxxxxx,xxxxxxxx)
+monitor   :     206: 0 1 0 0 1  00000032 00000032  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     210: 0 1 0 0 1  00000032 00000032  xxxxxxxx xxxxxxxx  33333333 xxxxxxxx
+monitor   :     211: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  33333333 xxxxxxxx
+write_ram :     216: <- (1,0, 1,1, 00000043,00000043, 44444444,xxxxxxxx)
+monitor   :     216: 0 1 0 1 1  00000043 00000043  44444444 xxxxxxxx  33333333 xxxxxxxx
+monitor   :     220: 0 1 0 1 1  00000043 00000043  44444444 xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     221: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     226: <- (1,0, 0,1, 00000043,00000043, xxxxxxxx,xxxxxxxx)
+monitor   :     226: 0 1 0 0 1  00000043 00000043  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     230: 0 1 0 0 1  00000043 00000043  xxxxxxxx xxxxxxxx  44444444 xxxxxxxx
+monitor   :     231: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  44444444 xxxxxxxx
+write_ram :     236: <- (1,0, 1,1, 00000054,00000054, 55555555,xxxxxxxx)
+monitor   :     236: 0 1 0 1 1  00000054 00000054  55555555 xxxxxxxx  44444444 xxxxxxxx
+monitor   :     240: 0 1 0 1 1  00000054 00000054  55555555 xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     241: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     246: <- (1,0, 0,1, 00000054,00000054, xxxxxxxx,xxxxxxxx)
+monitor   :     246: 0 1 0 0 1  00000054 00000054  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     250: 0 1 0 0 1  00000054 00000054  xxxxxxxx xxxxxxxx  55555555 xxxxxxxx
+monitor   :     251: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  55555555 xxxxxxxx
+monitor   :     260: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :         30#
+write_ram :     266: <- (1,1, 1,1, 00000060,00000064, 60606060,61616161)
+monitor   :     266: 0 1 1 1 1  00000060 00000064  60606060 61616161  xxxxxxxx xxxxxxxx
+monitor   :     271: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     276: <- (1,1, 0,0, 00000060,00000064, xxxxxxxx,xxxxxxxx)
+monitor   :     276: 0 1 1 0 0  00000060 00000064  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     280: 0 1 1 0 0  00000060 00000064  xxxxxxxx xxxxxxxx  60606060 61616161
+monitor   :     281: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  60606060 61616161
+write_ram :     286: <- (1,0, 1,1, 00000070,00000074, 70707070,71717171)
+monitor   :     286: 0 1 0 1 1  00000070 00000074  70707070 71717171  60606060 61616161
+monitor   :     290: 0 1 0 1 1  00000070 00000074  70707070 71717171  xxxxxxxx xxxxxxxx
+monitor   :     291: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     296: <- (1,1, 0,0, 00000070,00000074, xxxxxxxx,xxxxxxxx)
+monitor   :     296: 0 1 1 0 0  00000070 00000074  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     300: 0 1 1 0 0  00000070 00000074  xxxxxxxx xxxxxxxx  70707070 xxxxxxxx
+monitor   :     301: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  70707070 xxxxxxxx
+write_ram :     306: <- (0,1, 1,1, 00000080,00000084, 80808080,81818181)
+monitor   :     306: 0 0 1 1 1  00000080 00000084  80808080 81818181  70707070 xxxxxxxx
+monitor   :     310: 0 0 1 1 1  00000080 00000084  80808080 81818181  xxxxxxxx xxxxxxxx
+monitor   :     311: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     316: <- (1,1, 0,0, 00000080,00000084, xxxxxxxx,xxxxxxxx)
+monitor   :     316: 0 1 1 0 0  00000080 00000084  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     320: 0 1 1 0 0  00000080 00000084  xxxxxxxx xxxxxxxx  xxxxxxxx 81818181
+monitor   :     321: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx 81818181
+write_ram :     326: <- (0,0, 1,1, 00000090,00000094, 90909090,91919191)
+monitor   :     326: 0 0 0 1 1  00000090 00000094  90909090 91919191  xxxxxxxx 81818181
+monitor   :     330: 0 0 0 1 1  00000090 00000094  90909090 91919191  xxxxxxxx xxxxxxxx
+monitor   :     331: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     336: <- (1,1, 0,0, 00000090,00000094, xxxxxxxx,xxxxxxxx)
+monitor   :     336: 0 1 1 0 0  00000090 00000094  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     341: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :         30#
+write_ram :     356: <- (1,1, 1,1, 000000a0,000000a4, a0a0a0a0,a1a1a1a1)
+monitor   :     356: 0 1 1 1 1  000000a0 000000a4  a0a0a0a0 a1a1a1a1  xxxxxxxx xxxxxxxx
+monitor   :     361: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     366: <- (1,1, 1,1, 000000a8,000000ac, a8a8a8a8,a9a9a9a9)
+monitor   :     366: 0 1 1 1 1  000000a8 000000ac  a8a8a8a8 a9a9a9a9  xxxxxxxx xxxxxxxx
+monitor   :     371: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     376: <- (1,1, 1,1, 000000b0,000000b4, b0b0b0b0,b1b1b1b1)
+monitor   :     376: 0 1 1 1 1  000000b0 000000b4  b0b0b0b0 b1b1b1b1  xxxxxxxx xxxxxxxx
+monitor   :     381: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     386: <- (1,1, 1,1, 000000b8,000000bc, b8b8b8b8,b9b9b9b9)
+monitor   :     386: 0 1 1 1 1  000000b8 000000bc  b8b8b8b8 b9b9b9b9  xxxxxxxx xxxxxxxx
+monitor   :     391: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+write_ram :     396: <- (1,1, 0,0, 000000a0,000000a4, xxxxxxxx,xxxxxxxx)
+monitor   :     396: 0 1 1 0 0  000000a0 000000a4  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     400: 0 1 1 0 0  000000a0 000000a4  xxxxxxxx xxxxxxxx  a0a0a0a0 a1a1a1a1
+monitor   :     401: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  a0a0a0a0 a1a1a1a1
+write_ram :     406: <- (1,1, 0,0, 000000a8,000000ac, xxxxxxxx,xxxxxxxx)
+monitor   :     406: 0 1 1 0 0  000000a8 000000ac  xxxxxxxx xxxxxxxx  a0a0a0a0 a1a1a1a1
+monitor   :     410: 0 1 1 0 0  000000a8 000000ac  xxxxxxxx xxxxxxxx  a8a8a8a8 a9a9a9a9
+monitor   :     411: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  a8a8a8a8 a9a9a9a9
+write_ram :     416: <- (1,1, 0,0, 000000b0,000000b4, xxxxxxxx,xxxxxxxx)
+monitor   :     416: 0 1 1 0 0  000000b0 000000b4  xxxxxxxx xxxxxxxx  a8a8a8a8 a9a9a9a9
+monitor   :     420: 0 1 1 0 0  000000b0 000000b4  xxxxxxxx xxxxxxxx  b0b0b0b0 b1b1b1b1
+monitor   :     421: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  b0b0b0b0 b1b1b1b1
+write_ram :     426: <- (1,1, 0,0, 000000b8,000000bc, xxxxxxxx,xxxxxxxx)
+monitor   :     426: 0 1 1 0 0  000000b8 000000bc  xxxxxxxx xxxxxxxx  b0b0b0b0 b1b1b1b1
+monitor   :     430: 0 1 1 0 0  000000b8 000000bc  xxxxxxxx xxxxxxxx  b8b8b8b8 b9b9b9b9
+monitor   :     431: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  b8b8b8b8 b9b9b9b9
+monitor   :     440: 0 0 0 x x  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+dump_ram  : dump memory
+halt      : halt
