@@ -172,6 +172,7 @@ module top();
   task halt;
     begin
       repeat(5) @(posedge clk);
+      $display("halt      : halt");
       $finish;
     end
   endtask

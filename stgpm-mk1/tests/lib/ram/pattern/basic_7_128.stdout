@@ -124,3 +124,4 @@ monitor   :     466: 0 1 0 7f xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxx
 read_ram  :     471: (dout) -> (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)
 monitor   :     471: 0 0 x xx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 dump_ram  : dump memory
+halt      : halt

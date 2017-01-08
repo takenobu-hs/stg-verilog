@@ -9,3 +9,4 @@ monitor   :     141: 6  4 40
 monitor   :     151: 7  8 80
 monitor   :     161: x  x xx
 monitor   :     171: 0  1 01
+halt      : halt

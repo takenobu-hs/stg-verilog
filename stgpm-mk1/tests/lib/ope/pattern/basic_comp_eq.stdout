@@ -6,3 +6,4 @@ monitor   :     110: 00000000 ffffffff  0
 monitor   :     120: ffffffff 00000000  0
 monitor   :     130: 00000000 00000000  1
 monitor   :     140: ffffffff ffffffff  1
+halt      : halt

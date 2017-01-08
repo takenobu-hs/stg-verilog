@@ -11,3 +11,4 @@ monitor   :     160: ffffffff ffffffff  0 00000000
 monitor   :     170: 80000000 80000000  0 00000000
 monitor   :     180: 80000000 7fffffff  0 00000001
 monitor   :     190: 7fffffff 80000000  1 ffffffff
+halt      : halt

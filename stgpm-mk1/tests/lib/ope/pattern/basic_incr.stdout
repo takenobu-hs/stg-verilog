@@ -3,3 +3,4 @@ monitor   :      80: 00000001  0 00000002
 monitor   :      90: 12345678  0 12345679
 monitor   :     100: fffffffe  0 ffffffff
 monitor   :     110: ffffffff  1 00000000
+halt      : halt
