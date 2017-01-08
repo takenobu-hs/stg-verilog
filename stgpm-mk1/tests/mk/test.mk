@@ -17,6 +17,7 @@ endif
 #------------------------------------------------------------------------
 #  config
 #------------------------------------------------------------------------
+#RTL=
 #VFILES=
 TESTLOG=test_summary.txt
 
@@ -61,7 +62,7 @@ accept :
 
 	iverilog $(IVERFLAGS) \
 	  -o exe -s top \
-	  -I ../../../../rtl/include \
+	  -I $(RTL)/include \
 	  -I ./ \
 	  $(VFILES)
 

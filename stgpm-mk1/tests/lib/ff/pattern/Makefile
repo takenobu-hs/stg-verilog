@@ -1,7 +1,8 @@
 
-TOP=../../..
-include $(TOP)/mk/test.mk
+TOP=../../../..
+include $(TOP)/tests/mk/test.mk
 
+RTL=$(TOP)/rtl
 VFILES+=../testbench/bench.v
-VFILES+=../../../../rtl/lib/ff.v
+VFILES+=$(RTL)/lib/ff.v
 
