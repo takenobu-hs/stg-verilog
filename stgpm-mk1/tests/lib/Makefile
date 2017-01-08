@@ -17,7 +17,7 @@ endif
 #------------------------------------------------------------------------
 #  config
 #------------------------------------------------------------------------
-VFILES=
+#VFILES=
 TESTLOG=test_summary.txt
 
 
@@ -31,6 +31,11 @@ all :
 	@ for pat in `grep -v "^#" all.T` ; do \
 	    make $${pat}.test ; \
 	  done
+	@ if `grep "Fail" $(TESTLOG) > /dev/null` ; then \
+	    echo "TEST: FAIL" ; \
+	  else \
+	    echo "TEST: PASS" ; \
+	  fi
 
 #-- run all
 run :
@@ -73,11 +78,21 @@ accept :
 #-- test
 %.test : %.run
 	@ echo -n "$*	" >> $(TESTLOG)
-	@ if `diff $*.stdout $*.run.stdout > /dev/null` ; then \
-	    echo "Pass" >> $(TESTLOG) ; \
+	@ if `diff $*.stdout $*.run.stdout > $*.stdout.diff` ; then \
+	    echo -n "Pass" >> $(TESTLOG) ; \
+	    rm -f $*.stdout.diff ; \
 	  else \
-	    echo "Fail" >> $(TESTLOG) ; \
+	    echo -n "Fail" >> $(TESTLOG) ; \
 	  fi
+	@ if [ -e $*.run.hmdump ] ; then \
+	    if `diff $*.hmdump $*.run.hmdump > $*.hmdump.diff` ; then \
+	      echo -n "\tPass" >> $(TESTLOG) ; \
+	      rm -f $*.hmdump.diff ; \
+	    else \
+	      echo -n "\tFail" >> $(TESTLOG) ; \
+	    fi ; \
+	  fi
+	@ echo "" >> $(TESTLOG)
 
 #-- accept
 %.accept :
@@ -103,6 +118,7 @@ wave :
 	- rm -f mem.hmdump
 	- rm -f $*.run.stdout
 	- rm -f $*.run.*dump
+	- rm -f $*.diff
 	- rm -f $*.comp $*.run
 
 clean:
@@ -112,6 +128,7 @@ clean:
 	- rm -f wave.vcd
 	- rm -f *.run.stdout
 	- rm -f *.run.*dump
+	- rm -f *.diff
 	- rm -f *.comp *.run
 	- rm -f $(TESTLOG)
 
