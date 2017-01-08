@@ -45,6 +45,9 @@ module sp1_ram(
     else if (cs & ~we) begin
       dout <= mem[adrs];
     end
+    else if (~cs) begin
+      dout <= {DW{1'bx}};
+    end
     else begin
       mem[adrs] <= {DW{1'bx}};
       dout <= {DW{1'bx}};
