@@ -1,0 +1,157 @@
+monitor   :       0: 1  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :      51: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :          0#
+load_heap :     106: <- (00000000,1)
+monitor   :     106: 0  1 0 1  00000000  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     111: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :         10#
+store_heap:     126: <- (00000010,0, 01234567,xxxxxxxx)
+monitor   :     126: 0  1 1 0  00000010  01234567 xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     131: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+load_heap :     136: <- (00000010,0)
+monitor   :     136: 0  1 0 0  00000010  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     140: 0  1 0 0  00000010  xxxxxxxx xxxxxxxx  01234567 xxxxxxxx
+monitor   :     141: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  01234567 xxxxxxxx
+store_heap:     146: <- (00000024,0, 89abcdef,xxxxxxxx)
+monitor   :     146: 0  1 1 0  00000024  89abcdef xxxxxxxx  01234567 xxxxxxxx
+monitor   :     150: 0  1 1 0  00000024  89abcdef xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     151: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+load_heap :     156: <- (00000024,0)
+monitor   :     156: 0  1 0 0  00000024  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     160: 0  1 0 0  00000024  xxxxxxxx xxxxxxxx  89abcdef xxxxxxxx
+monitor   :     161: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  89abcdef xxxxxxxx
+monitor   :     170: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :         20#
+store_heap:     176: <- (00000030,1, 11111111,22222222)
+monitor   :     176: 0  1 1 1  00000030  11111111 22222222  xxxxxxxx xxxxxxxx
+monitor   :     181: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+load_heap :     186: <- (00000030,1)
+monitor   :     186: 0  1 0 1  00000030  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     190: 0  1 0 1  00000030  xxxxxxxx xxxxxxxx  11111111 22222222
+monitor   :     191: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  11111111 22222222
+store_heap:     196: <- (00000044,1, 33333333,44444444)
+monitor   :     196: 0  1 1 1  00000044  33333333 44444444  11111111 22222222
+monitor   :     200: 0  1 1 1  00000044  33333333 44444444  xxxxxxxx xxxxxxxx
+monitor   :     201: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+load_heap :     206: <- (00000044,1)
+monitor   :     206: 0  1 0 1  00000044  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     210: 0  1 0 1  00000044  xxxxxxxx xxxxxxxx  33333333 44444444
+monitor   :     211: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  33333333 44444444
+store_heap:     216: <- (00000058,1, 55555555,66666666)
+monitor   :     216: 0  1 1 1  00000058  55555555 66666666  33333333 44444444
+monitor   :     220: 0  1 1 1  00000058  55555555 66666666  xxxxxxxx xxxxxxxx
+monitor   :     221: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+load_heap :     226: <- (00000058,1)
+monitor   :     226: 0  1 0 1  00000058  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     230: 0  1 0 1  00000058  xxxxxxxx xxxxxxxx  55555555 66666666
+monitor   :     231: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  55555555 66666666
+store_heap:     236: <- (0000006c,1, 77777777,88888888)
+monitor   :     236: 0  1 1 1  0000006c  77777777 88888888  55555555 66666666
+monitor   :     240: 0  1 1 1  0000006c  77777777 88888888  xxxxxxxx xxxxxxxx
+monitor   :     241: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+load_heap :     246: <- (0000006c,1)
+monitor   :     246: 0  1 0 1  0000006c  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     250: 0  1 0 1  0000006c  xxxxxxxx xxxxxxxx  77777777 88888888
+monitor   :     251: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  77777777 88888888
+monitor   :     260: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :         30#
+store_heap:     266: <- (00000ff8,1, f0f0f0f0,f1f1f1f1)
+monitor   :     266: 0  1 1 1  00000ff8  f0f0f0f0 f1f1f1f1  xxxxxxxx xxxxxxxx
+monitor   :     271: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+load_heap :     276: <- (00000ff8,1)
+monitor   :     276: 0  1 0 1  00000ff8  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     280: 0  1 0 1  00000ff8  xxxxxxxx xxxxxxxx  f0f0f0f0 f1f1f1f1
+monitor   :     281: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  f0f0f0f0 f1f1f1f1
+monitor   :     290: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :         40#
+store_heap:     296: <- (00000070,0, 01010101,xxxxxxxx)
+monitor   :     296: 0  1 1 0  00000070  01010101 xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     301: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+store_heap:     306: <- (00000074,0, 02020202,xxxxxxxx)
+monitor   :     306: 0  1 1 0  00000074  02020202 xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     311: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+store_heap:     316: <- (00000078,0, 03030303,xxxxxxxx)
+monitor   :     316: 0  1 1 0  00000078  03030303 xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     321: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+store_heap:     326: <- (0000007c,0, 04040404,xxxxxxxx)
+monitor   :     326: 0  1 1 0  0000007c  04040404 xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     331: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+load_heap :     336: <- (00000070,0)
+monitor   :     336: 0  1 0 0  00000070  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     340: 0  1 0 0  00000070  xxxxxxxx xxxxxxxx  01010101 xxxxxxxx
+monitor   :     341: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  01010101 xxxxxxxx
+load_heap :     346: <- (00000074,0)
+monitor   :     346: 0  1 0 0  00000074  xxxxxxxx xxxxxxxx  01010101 xxxxxxxx
+monitor   :     350: 0  1 0 0  00000074  xxxxxxxx xxxxxxxx  02020202 xxxxxxxx
+monitor   :     351: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  02020202 xxxxxxxx
+load_heap :     356: <- (00000078,0)
+monitor   :     356: 0  1 0 0  00000078  xxxxxxxx xxxxxxxx  02020202 xxxxxxxx
+monitor   :     360: 0  1 0 0  00000078  xxxxxxxx xxxxxxxx  03030303 xxxxxxxx
+monitor   :     361: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  03030303 xxxxxxxx
+load_heap :     366: <- (0000007c,0)
+monitor   :     366: 0  1 0 0  0000007c  xxxxxxxx xxxxxxxx  03030303 xxxxxxxx
+monitor   :     370: 0  1 0 0  0000007c  xxxxxxxx xxxxxxxx  04040404 xxxxxxxx
+monitor   :     371: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  04040404 xxxxxxxx
+monitor   :     380: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :         50#
+store_heap:     386: <- (00000080,1, 00010001,00010002)
+monitor   :     386: 0  1 1 1  00000080  00010001 00010002  xxxxxxxx xxxxxxxx
+monitor   :     391: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+store_heap:     396: <- (00000088,1, 00010003,00010004)
+monitor   :     396: 0  1 1 1  00000088  00010003 00010004  xxxxxxxx xxxxxxxx
+monitor   :     401: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+store_heap:     406: <- (00000090,1, 00010005,00010006)
+monitor   :     406: 0  1 1 1  00000090  00010005 00010006  xxxxxxxx xxxxxxxx
+monitor   :     411: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+store_heap:     416: <- (00000098,1, 00010007,00010008)
+monitor   :     416: 0  1 1 1  00000098  00010007 00010008  xxxxxxxx xxxxxxxx
+monitor   :     421: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+load_heap :     426: <- (00000080,1)
+monitor   :     426: 0  1 0 1  00000080  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     430: 0  1 0 1  00000080  xxxxxxxx xxxxxxxx  00010001 00010002
+monitor   :     431: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  00010001 00010002
+load_heap :     436: <- (00000088,1)
+monitor   :     436: 0  1 0 1  00000088  xxxxxxxx xxxxxxxx  00010001 00010002
+monitor   :     440: 0  1 0 1  00000088  xxxxxxxx xxxxxxxx  00010003 00010004
+monitor   :     441: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  00010003 00010004
+load_heap :     446: <- (00000090,1)
+monitor   :     446: 0  1 0 1  00000090  xxxxxxxx xxxxxxxx  00010003 00010004
+monitor   :     450: 0  1 0 1  00000090  xxxxxxxx xxxxxxxx  00010005 00010006
+monitor   :     451: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  00010005 00010006
+load_heap :     456: <- (00000098,1)
+monitor   :     456: 0  1 0 1  00000098  xxxxxxxx xxxxxxxx  00010005 00010006
+monitor   :     460: 0  1 0 1  00000098  xxxxxxxx xxxxxxxx  00010007 00010008
+monitor   :     461: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  00010007 00010008
+monitor   :     470: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+test_mark :         60#
+store_heap:     476: <- (000000a4,1, 00020001,00020002)
+monitor   :     476: 0  1 1 1  000000a4  00020001 00020002  xxxxxxxx xxxxxxxx
+monitor   :     481: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+store_heap:     486: <- (000000ac,1, 00020003,00020004)
+monitor   :     486: 0  1 1 1  000000ac  00020003 00020004  xxxxxxxx xxxxxxxx
+monitor   :     491: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+store_heap:     496: <- (000000b4,1, 00020005,00020006)
+monitor   :     496: 0  1 1 1  000000b4  00020005 00020006  xxxxxxxx xxxxxxxx
+monitor   :     501: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+store_heap:     506: <- (000000bc,1, 00020007,00020008)
+monitor   :     506: 0  1 1 1  000000bc  00020007 00020008  xxxxxxxx xxxxxxxx
+monitor   :     511: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+load_heap :     516: <- (000000a4,1)
+monitor   :     516: 0  1 0 1  000000a4  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+monitor   :     520: 0  1 0 1  000000a4  xxxxxxxx xxxxxxxx  00020001 00020002
+monitor   :     521: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  00020001 00020002
+load_heap :     526: <- (000000ac,1)
+monitor   :     526: 0  1 0 1  000000ac  xxxxxxxx xxxxxxxx  00020001 00020002
+monitor   :     530: 0  1 0 1  000000ac  xxxxxxxx xxxxxxxx  00020003 00020004
+monitor   :     531: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  00020003 00020004
+load_heap :     536: <- (000000b4,1)
+monitor   :     536: 0  1 0 1  000000b4  xxxxxxxx xxxxxxxx  00020003 00020004
+monitor   :     540: 0  1 0 1  000000b4  xxxxxxxx xxxxxxxx  00020005 00020006
+monitor   :     541: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  00020005 00020006
+load_heap :     546: <- (000000bc,1)
+monitor   :     546: 0  1 0 1  000000bc  xxxxxxxx xxxxxxxx  00020005 00020006
+monitor   :     550: 0  1 0 1  000000bc  xxxxxxxx xxxxxxxx  00020007 00020008
+monitor   :     551: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  00020007 00020008
+monitor   :     560: 0  0 x x  xxxxxxxx  xxxxxxxx xxxxxxxx  xxxxxxxx xxxxxxxx
+dump_ram  : dump memory
+halt      : halt
